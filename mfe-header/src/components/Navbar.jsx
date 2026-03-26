@@ -1,7 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import eventBus from 'shared/eventBus';
 import './Navbar.css';
 
-function Navbar({ notifications = 0 }) {
+function Navbar() {
+  const [notifications, setNotifications] = useState(0);
+
+  useEffect(() => {
+    const unsubscribe = eventBus.on('game:joined', (data) => {
+      setNotifications(prev => prev + 1);
+    });
+
+    return () => {
+      if (typeof unsubscribe === 'function') {
+        unsubscribe();
+      }
+    };
+  }, []);
+
   return (
     <nav className="navbar">
       <div className="navbar-brand">
