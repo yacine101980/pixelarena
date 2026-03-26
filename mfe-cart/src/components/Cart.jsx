@@ -7,27 +7,15 @@ function Cart() {
 
   useEffect(() => {
     const unsubscribe = eventBus.on('cart:add', (product) => {
-      
-      setItems(prevItems => [
-        ...prevItems, 
-        { 
-          ...product, 
-          cartId: Date.now() + Math.random() 
-        }
-      ]);
+      setItems(prev => [...prev, { ...product, cartId: Date.now() }]);
     });
-
-    return () => {
-      unsubscribe();
-    };
+    return () => unsubscribe();
   }, []);
 
   useEffect(() => {
-    const currentTotal = items.reduce((sum, item) => sum + item.price, 0);
-    
     eventBus.emit('cart:updated', {
       count: items.length,
-      total: currentTotal
+      total: items.reduce((sum, item) => sum + item.price, 0),
     });
   }, [items]);
 
