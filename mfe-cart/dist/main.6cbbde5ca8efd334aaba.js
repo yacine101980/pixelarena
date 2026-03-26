@@ -6,18 +6,16 @@
  * or disable the default devtool with "devtool: false".
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
-var mfeCatalog;
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "webpack/container/entry/mfeCatalog"
-/*!***********************!*\
-  !*** container entry ***!
-  \***********************/
-(__unused_webpack_module, exports, __webpack_require__) {
+/***/ "./src/index.js"
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-eval("{var moduleMap = {\n\t\"./CatalogView\": () => {\n\t\treturn Promise.all([__webpack_require__.e(\"webpack_sharing_consume_default_react_react\"), __webpack_require__.e(\"src_components_Catalog_jsx\")]).then(() => (() => ((__webpack_require__(/*! ./src/components/Catalog */ \"./src/components/Catalog.jsx\")))));\n\t}\n};\nvar get = (module, getScope) => {\n\t__webpack_require__.R = getScope;\n\tgetScope = (\n\t\t__webpack_require__.o(moduleMap, module)\n\t\t\t? moduleMap[module]()\n\t\t\t: Promise.resolve().then(() => {\n\t\t\t\tthrow new Error('Module \"' + module + '\" does not exist in container.');\n\t\t\t})\n\t);\n\t__webpack_require__.R = undefined;\n\treturn getScope;\n};\nvar init = (shareScope, initScope) => {\n\tif (!__webpack_require__.S) return;\n\tvar name = \"default\"\n\tvar oldScope = __webpack_require__.S[name];\n\tif(oldScope && oldScope !== shareScope) throw new Error(\"Container initialization failed as it has already been initialized with a different share scope\");\n\t__webpack_require__.S[name] = shareScope;\n\treturn __webpack_require__.I(name, initScope);\n};\n\n// This exports getters to disallow modifications\n__webpack_require__.d(exports, {\n\tget: () => (get),\n\tinit: () => (init)\n});\n\n//# sourceURL=webpack://pixelarena-mfe-catalog/container_entry?\n}");
+eval("{Promise.all(/*! import() */[__webpack_require__.e(\"webpack_sharing_consume_default_react_react\"), __webpack_require__.e(\"src_components_Cart_jsx\"), __webpack_require__.e(\"src_bootstrap_jsx\")]).then(__webpack_require__.bind(__webpack_require__, /*! ./bootstrap */ \"./src/bootstrap.jsx\"));\n\n//# sourceURL=webpack://pixelarena-mfe-cart/./src/index.js?\n}");
 
 /***/ }
 
@@ -105,7 +103,7 @@ eval("{var moduleMap = {\n\t\"./CatalogView\": () => {\n\t\treturn Promise.all([
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "" + chunkId + "." + {"vendors-node_modules_react-dom_index_js":"d2a11a78c20a057ce6d0","vendors-node_modules_react_index_js":"fcac1fdd44e1cb8bbb5e","src_components_Catalog_jsx":"6cbef3074be6ee3a6efc"}[chunkId] + ".js";
+/******/ 			return "" + chunkId + "." + {"src_components_Cart_jsx":"5c671cb1566c26d2c0da","src_bootstrap_jsx":"e5c68138c69652ae3e39","vendors-node_modules_react-dom_index_js":"54528c6753361a3b7deb","vendors-node_modules_react_index_js":"fa0daaa27cfeac1a5351"}[chunkId] + ".js";
 /******/ 		};
 /******/ 	})();
 /******/ 	
@@ -117,7 +115,7 @@ eval("{var moduleMap = {\n\t\"./CatalogView\": () => {\n\t\treturn Promise.all([
 /******/ 	/* webpack/runtime/load script */
 /******/ 	(() => {
 /******/ 		var inProgress = {};
-/******/ 		var dataWebpackPrefix = "pixelarena-mfe-catalog:";
+/******/ 		var dataWebpackPrefix = "pixelarena-mfe-cart:";
 /******/ 		// loadScript function to load a script via script tag
 /******/ 		__webpack_require__.l = (url, done, key, chunkId) => {
 /******/ 			if(inProgress[url]) { inProgress[url].push(done); return; }
@@ -200,7 +198,7 @@ eval("{var moduleMap = {\n\t\"./CatalogView\": () => {\n\t\treturn Promise.all([
 /******/ 			var warn = (msg) => {
 /******/ 				if (typeof console !== "undefined" && console.warn) console.warn(msg);
 /******/ 			};
-/******/ 			var uniqueName = "pixelarena-mfe-catalog";
+/******/ 			var uniqueName = "pixelarena-mfe-cart";
 /******/ 			var register = (name, version, factory, eager) => {
 /******/ 				var versions = scope[name] = scope[name] || {};
 /******/ 				var activeVersion = versions[version];
@@ -232,7 +230,7 @@ eval("{var moduleMap = {\n\t\"./CatalogView\": () => {\n\t\treturn Promise.all([
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	(() => {
-/******/ 		__webpack_require__.p = "http://localhost:3003/";
+/******/ 		__webpack_require__.p = "http://localhost:3004/";
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/consumes */
@@ -360,12 +358,16 @@ eval("{var moduleMap = {\n\t\"./CatalogView\": () => {\n\t\treturn Promise.all([
 /******/ 		});
 /******/ 		var installedModules = {};
 /******/ 		var moduleToHandlerMapping = {
-/******/ 			"webpack/sharing/consume/default/react/react": () => (loadSingletonVersion("default", "react", false, [1,18,2,0], () => (__webpack_require__.e("vendors-node_modules_react_index_js").then(() => (() => (__webpack_require__(/*! react */ "./node_modules/react/index.js")))))))
+/******/ 			"webpack/sharing/consume/default/react/react": () => (loadSingletonVersion("default", "react", false, [1,18,2,0], () => (__webpack_require__.e("vendors-node_modules_react_index_js").then(() => (() => (__webpack_require__(/*! react */ "./node_modules/react/index.js"))))))),
+/******/ 			"webpack/sharing/consume/default/react-dom/react-dom": () => (loadSingletonVersion("default", "react-dom", false, [1,18,2,0], () => (__webpack_require__.e("vendors-node_modules_react-dom_index_js").then(() => (() => (__webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js")))))))
 /******/ 		};
 /******/ 		// no consumes in initial chunks
 /******/ 		var chunkMapping = {
 /******/ 			"webpack_sharing_consume_default_react_react": [
 /******/ 				"webpack/sharing/consume/default/react/react"
+/******/ 			],
+/******/ 			"src_bootstrap_jsx": [
+/******/ 				"webpack/sharing/consume/default/react-dom/react-dom"
 /******/ 			]
 /******/ 		};
 /******/ 		var startedInstallModules = {};
@@ -409,7 +411,7 @@ eval("{var moduleMap = {\n\t\"./CatalogView\": () => {\n\t\treturn Promise.all([
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"mfeCatalog": 0
+/******/ 			"main": 0
 /******/ 		};
 /******/ 		
 /******/ 		__webpack_require__.f.j = (chunkId, promises) => {
@@ -486,7 +488,7 @@ eval("{var moduleMap = {\n\t\"./CatalogView\": () => {\n\t\treturn Promise.all([
 /******/ 		
 /******/ 		}
 /******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunkpixelarena_mfe_catalog"] = self["webpackChunkpixelarena_mfe_catalog"] || [];
+/******/ 		var chunkLoadingGlobal = self["webpackChunkpixelarena_mfe_cart"] = self["webpackChunkpixelarena_mfe_cart"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();
@@ -501,8 +503,7 @@ eval("{var moduleMap = {\n\t\"./CatalogView\": () => {\n\t\treturn Promise.all([
 /******/ 	// module cache are used so entry inlining is disabled
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	var __webpack_exports__ = __webpack_require__("webpack/container/entry/mfeCatalog");
-/******/ 	mfeCatalog = __webpack_exports__;
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
 /******/ 	
 /******/ })()
 ;

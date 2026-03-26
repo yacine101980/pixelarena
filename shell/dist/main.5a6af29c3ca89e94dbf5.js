@@ -6,18 +6,112 @@
  * or disable the default devtool with "devtool: false".
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
-var mfeCatalog;
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "webpack/container/entry/mfeCatalog"
-/*!***********************!*\
-  !*** container entry ***!
-  \***********************/
-(__unused_webpack_module, exports, __webpack_require__) {
+/***/ "./src/index.js"
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-eval("{var moduleMap = {\n\t\"./CatalogView\": () => {\n\t\treturn Promise.all([__webpack_require__.e(\"webpack_sharing_consume_default_react_react\"), __webpack_require__.e(\"src_components_Catalog_jsx\")]).then(() => (() => ((__webpack_require__(/*! ./src/components/Catalog */ \"./src/components/Catalog.jsx\")))));\n\t}\n};\nvar get = (module, getScope) => {\n\t__webpack_require__.R = getScope;\n\tgetScope = (\n\t\t__webpack_require__.o(moduleMap, module)\n\t\t\t? moduleMap[module]()\n\t\t\t: Promise.resolve().then(() => {\n\t\t\t\tthrow new Error('Module \"' + module + '\" does not exist in container.');\n\t\t\t})\n\t);\n\t__webpack_require__.R = undefined;\n\treturn getScope;\n};\nvar init = (shareScope, initScope) => {\n\tif (!__webpack_require__.S) return;\n\tvar name = \"default\"\n\tvar oldScope = __webpack_require__.S[name];\n\tif(oldScope && oldScope !== shareScope) throw new Error(\"Container initialization failed as it has already been initialized with a different share scope\");\n\t__webpack_require__.S[name] = shareScope;\n\treturn __webpack_require__.I(name, initScope);\n};\n\n// This exports getters to disallow modifications\n__webpack_require__.d(exports, {\n\tget: () => (get),\n\tinit: () => (init)\n});\n\n//# sourceURL=webpack://pixelarena-mfe-catalog/container_entry?\n}");
+eval("{Promise.all(/*! import() */[__webpack_require__.e(\"webpack_sharing_consume_default_react_react\"), __webpack_require__.e(\"src_bootstrap_jsx\")]).then(__webpack_require__.bind(__webpack_require__, /*! ./bootstrap */ \"./src/bootstrap.jsx\"));\n\n//# sourceURL=webpack://pixelarena-shell/./src/index.js?\n}");
+
+/***/ },
+
+/***/ "webpack/container/reference/mfeCart"
+/*!***************************************************************!*\
+  !*** external "mfeCart@http://localhost:3004/remoteEntry.js" ***!
+  \***************************************************************/
+(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+var __webpack_error__ = new Error();
+module.exports = new Promise((resolve, reject) => {
+	if(typeof mfeCart !== "undefined") return resolve();
+	__webpack_require__.l("http://localhost:3004/remoteEntry.js", (event) => {
+		if(typeof mfeCart !== "undefined") return resolve();
+		var errorType = event && (event.type === 'load' ? 'missing' : event.type);
+		var realSrc = event && event.target && event.target.src;
+		__webpack_error__.message = 'Loading script failed.\n(' + errorType + ': ' + realSrc + ')';
+		__webpack_error__.name = 'ScriptExternalLoadError';
+		__webpack_error__.type = errorType;
+		__webpack_error__.request = realSrc;
+		reject(__webpack_error__);
+	}, "mfeCart");
+}).then(() => (mfeCart));
+
+/***/ },
+
+/***/ "webpack/container/reference/mfeCatalog"
+/*!******************************************************************!*\
+  !*** external "mfeCatalog@http://localhost:3003/remoteEntry.js" ***!
+  \******************************************************************/
+(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+var __webpack_error__ = new Error();
+module.exports = new Promise((resolve, reject) => {
+	if(typeof mfeCatalog !== "undefined") return resolve();
+	__webpack_require__.l("http://localhost:3003/remoteEntry.js", (event) => {
+		if(typeof mfeCatalog !== "undefined") return resolve();
+		var errorType = event && (event.type === 'load' ? 'missing' : event.type);
+		var realSrc = event && event.target && event.target.src;
+		__webpack_error__.message = 'Loading script failed.\n(' + errorType + ': ' + realSrc + ')';
+		__webpack_error__.name = 'ScriptExternalLoadError';
+		__webpack_error__.type = errorType;
+		__webpack_error__.request = realSrc;
+		reject(__webpack_error__);
+	}, "mfeCatalog");
+}).then(() => (mfeCatalog));
+
+/***/ },
+
+/***/ "webpack/container/reference/mfeHeader"
+/*!*****************************************************************!*\
+  !*** external "mfeHeader@http://localhost:3001/remoteEntry.js" ***!
+  \*****************************************************************/
+(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+var __webpack_error__ = new Error();
+module.exports = new Promise((resolve, reject) => {
+	if(typeof mfeHeader !== "undefined") return resolve();
+	__webpack_require__.l("http://localhost:3001/remoteEntry.js", (event) => {
+		if(typeof mfeHeader !== "undefined") return resolve();
+		var errorType = event && (event.type === 'load' ? 'missing' : event.type);
+		var realSrc = event && event.target && event.target.src;
+		__webpack_error__.message = 'Loading script failed.\n(' + errorType + ': ' + realSrc + ')';
+		__webpack_error__.name = 'ScriptExternalLoadError';
+		__webpack_error__.type = errorType;
+		__webpack_error__.request = realSrc;
+		reject(__webpack_error__);
+	}, "mfeHeader");
+}).then(() => (mfeHeader));
+
+/***/ },
+
+/***/ "webpack/container/reference/mfeLobby"
+/*!****************************************************************!*\
+  !*** external "mfeLobby@http://localhost:3005/remoteEntry.js" ***!
+  \****************************************************************/
+(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+var __webpack_error__ = new Error();
+module.exports = new Promise((resolve, reject) => {
+	if(typeof mfeLobby !== "undefined") return resolve();
+	__webpack_require__.l("http://localhost:3005/remoteEntry.js", (event) => {
+		if(typeof mfeLobby !== "undefined") return resolve();
+		var errorType = event && (event.type === 'load' ? 'missing' : event.type);
+		var realSrc = event && event.target && event.target.src;
+		__webpack_error__.message = 'Loading script failed.\n(' + errorType + ': ' + realSrc + ')';
+		__webpack_error__.name = 'ScriptExternalLoadError';
+		__webpack_error__.type = errorType;
+		__webpack_error__.request = realSrc;
+		reject(__webpack_error__);
+	}, "mfeLobby");
+}).then(() => (mfeLobby));
 
 /***/ }
 
@@ -33,6 +127,12 @@ eval("{var moduleMap = {\n\t\"./CatalogView\": () => {\n\t\treturn Promise.all([
 /******/ 		if (cachedModule !== undefined) {
 /******/ 			return cachedModule.exports;
 /******/ 		}
+/******/ 		// Check if module exists (development only)
+/******/ 		if (__webpack_modules__[moduleId] === undefined) {
+/******/ 			var e = new Error("Cannot find module '" + moduleId + "'");
+/******/ 			e.code = 'MODULE_NOT_FOUND';
+/******/ 			throw e;
+/******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = __webpack_module_cache__[moduleId] = {
 /******/ 			id: moduleId,
@@ -41,12 +141,6 @@ eval("{var moduleMap = {\n\t\"./CatalogView\": () => {\n\t\treturn Promise.all([
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
-/******/ 		if (!(moduleId in __webpack_modules__)) {
-/******/ 			delete __webpack_module_cache__[moduleId];
-/******/ 			var e = new Error("Cannot find module '" + moduleId + "'");
-/******/ 			e.code = 'MODULE_NOT_FOUND';
-/******/ 			throw e;
-/******/ 		}
 /******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
 /******/ 	
 /******/ 		// Flag the module as loaded
@@ -72,6 +166,36 @@ eval("{var moduleMap = {\n\t\"./CatalogView\": () => {\n\t\treturn Promise.all([
 /******/ 				() => (module);
 /******/ 			__webpack_require__.d(getter, { a: getter });
 /******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/create fake namespace object */
+/******/ 	(() => {
+/******/ 		var getProto = Object.getPrototypeOf ? (obj) => (Object.getPrototypeOf(obj)) : (obj) => (obj.__proto__);
+/******/ 		var leafPrototypes;
+/******/ 		// create a fake namespace object
+/******/ 		// mode & 1: value is a module id, require it
+/******/ 		// mode & 2: merge all properties of value into the ns
+/******/ 		// mode & 4: return value when already ns object
+/******/ 		// mode & 16: return value when it's Promise-like
+/******/ 		// mode & 8|1: behave like require
+/******/ 		__webpack_require__.t = function(value, mode) {
+/******/ 			if(mode & 1) value = this(value);
+/******/ 			if(mode & 8) return value;
+/******/ 			if(typeof value === 'object' && value) {
+/******/ 				if((mode & 4) && value.__esModule) return value;
+/******/ 				if((mode & 16) && typeof value.then === 'function') return value;
+/******/ 			}
+/******/ 			var ns = Object.create(null);
+/******/ 			__webpack_require__.r(ns);
+/******/ 			var def = {};
+/******/ 			leafPrototypes = leafPrototypes || [null, getProto({}), getProto([]), getProto(getProto)];
+/******/ 			for(var current = mode & 2 && value; (typeof current == 'object' || typeof current == 'function') && !~leafPrototypes.indexOf(current); current = getProto(current)) {
+/******/ 				Object.getOwnPropertyNames(current).forEach((key) => (def[key] = () => (value[key])));
+/******/ 			}
+/******/ 			def['default'] = () => (value);
+/******/ 			__webpack_require__.d(ns, def);
+/******/ 			return ns;
 /******/ 		};
 /******/ 	})();
 /******/ 	
@@ -105,7 +229,7 @@ eval("{var moduleMap = {\n\t\"./CatalogView\": () => {\n\t\treturn Promise.all([
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "" + chunkId + "." + {"vendors-node_modules_react-dom_index_js":"d2a11a78c20a057ce6d0","vendors-node_modules_react_index_js":"fcac1fdd44e1cb8bbb5e","src_components_Catalog_jsx":"6cbef3074be6ee3a6efc"}[chunkId] + ".js";
+/******/ 			return "" + chunkId + "." + {"src_bootstrap_jsx":"76765afbbfdee3f14802","vendors-node_modules_react-dom_index_js":"543c05e326794169560a","vendors-node_modules_react_index_js":"9cc8a0d2e69a6b233e32"}[chunkId] + ".js";
 /******/ 		};
 /******/ 	})();
 /******/ 	
@@ -117,7 +241,7 @@ eval("{var moduleMap = {\n\t\"./CatalogView\": () => {\n\t\treturn Promise.all([
 /******/ 	/* webpack/runtime/load script */
 /******/ 	(() => {
 /******/ 		var inProgress = {};
-/******/ 		var dataWebpackPrefix = "pixelarena-mfe-catalog:";
+/******/ 		var dataWebpackPrefix = "pixelarena-shell:";
 /******/ 		// loadScript function to load a script via script tag
 /******/ 		__webpack_require__.l = (url, done, key, chunkId) => {
 /******/ 			if(inProgress[url]) { inProgress[url].push(done); return; }
@@ -179,6 +303,89 @@ eval("{var moduleMap = {\n\t\"./CatalogView\": () => {\n\t\treturn Promise.all([
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/remotes loading */
+/******/ 	(() => {
+/******/ 		var chunkMapping = {
+/******/ 			"webpack_container_remote_mfeHeader_Navbar": [
+/******/ 				"webpack/container/remote/mfeHeader/Navbar"
+/******/ 			],
+/******/ 			"webpack_container_remote_mfeLobby_Lobby": [
+/******/ 				"webpack/container/remote/mfeLobby/Lobby"
+/******/ 			],
+/******/ 			"webpack_container_remote_mfeCatalog_Catalog": [
+/******/ 				"webpack/container/remote/mfeCatalog/Catalog"
+/******/ 			],
+/******/ 			"webpack_container_remote_mfeCart_Cart": [
+/******/ 				"webpack/container/remote/mfeCart/Cart"
+/******/ 			]
+/******/ 		};
+/******/ 		var idToExternalAndNameMapping = {
+/******/ 			"webpack/container/remote/mfeHeader/Navbar": [
+/******/ 				"default",
+/******/ 				"./Navbar",
+/******/ 				"webpack/container/reference/mfeHeader"
+/******/ 			],
+/******/ 			"webpack/container/remote/mfeLobby/Lobby": [
+/******/ 				"default",
+/******/ 				"./Lobby",
+/******/ 				"webpack/container/reference/mfeLobby"
+/******/ 			],
+/******/ 			"webpack/container/remote/mfeCatalog/Catalog": [
+/******/ 				"default",
+/******/ 				"./Catalog",
+/******/ 				"webpack/container/reference/mfeCatalog"
+/******/ 			],
+/******/ 			"webpack/container/remote/mfeCart/Cart": [
+/******/ 				"default",
+/******/ 				"./Cart",
+/******/ 				"webpack/container/reference/mfeCart"
+/******/ 			]
+/******/ 		};
+/******/ 		__webpack_require__.f.remotes = (chunkId, promises) => {
+/******/ 			if(__webpack_require__.o(chunkMapping, chunkId)) {
+/******/ 				chunkMapping[chunkId].forEach((id) => {
+/******/ 					var getScope = __webpack_require__.R;
+/******/ 					if(!getScope) getScope = [];
+/******/ 					var data = idToExternalAndNameMapping[id];
+/******/ 					if(getScope.indexOf(data) >= 0) return;
+/******/ 					getScope.push(data);
+/******/ 					if(data.p) return promises.push(data.p);
+/******/ 					var onError = (error) => {
+/******/ 						if(!error) error = new Error("Container missing");
+/******/ 						if(typeof error.message === "string")
+/******/ 							error.message += '\nwhile loading "' + data[1] + '" from ' + data[2];
+/******/ 						__webpack_require__.m[id] = () => {
+/******/ 							throw error;
+/******/ 						}
+/******/ 						data.p = 0;
+/******/ 					};
+/******/ 					var handleFunction = (fn, arg1, arg2, d, next, first) => {
+/******/ 						try {
+/******/ 							var promise = fn(arg1, arg2);
+/******/ 							if(promise && promise.then) {
+/******/ 								var p = promise.then((result) => (next(result, d)), onError);
+/******/ 								if(first) promises.push(data.p = p); else return p;
+/******/ 							} else {
+/******/ 								return next(promise, d, first);
+/******/ 							}
+/******/ 						} catch(error) {
+/******/ 							onError(error);
+/******/ 						}
+/******/ 					}
+/******/ 					var onExternal = (external, _, first) => (external ? handleFunction(__webpack_require__.I, data[0], 0, external, onInitialized, first) : onError());
+/******/ 					var onInitialized = (_, external, first) => (handleFunction(external.get, data[1], getScope, 0, onFactory, first));
+/******/ 					var onFactory = (factory) => {
+/******/ 						data.p = 1;
+/******/ 						__webpack_require__.m[id] = (module) => {
+/******/ 							module.exports = factory();
+/******/ 						}
+/******/ 					};
+/******/ 					handleFunction(__webpack_require__, data[2], 0, 0, onExternal, 1);
+/******/ 				});
+/******/ 			}
+/******/ 		}
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/sharing */
 /******/ 	(() => {
 /******/ 		__webpack_require__.S = {};
@@ -200,7 +407,7 @@ eval("{var moduleMap = {\n\t\"./CatalogView\": () => {\n\t\treturn Promise.all([
 /******/ 			var warn = (msg) => {
 /******/ 				if (typeof console !== "undefined" && console.warn) console.warn(msg);
 /******/ 			};
-/******/ 			var uniqueName = "pixelarena-mfe-catalog";
+/******/ 			var uniqueName = "pixelarena-shell";
 /******/ 			var register = (name, version, factory, eager) => {
 /******/ 				var versions = scope[name] = scope[name] || {};
 /******/ 				var activeVersion = versions[version];
@@ -222,6 +429,10 @@ eval("{var moduleMap = {\n\t\"./CatalogView\": () => {\n\t\treturn Promise.all([
 /******/ 				case "default": {
 /******/ 					register("react-dom", "18.3.1", () => (Promise.all([__webpack_require__.e("vendors-node_modules_react-dom_index_js"), __webpack_require__.e("webpack_sharing_consume_default_react_react")]).then(() => (() => (__webpack_require__(/*! ./node_modules/react-dom/index.js */ "./node_modules/react-dom/index.js"))))));
 /******/ 					register("react", "18.3.1", () => (__webpack_require__.e("vendors-node_modules_react_index_js").then(() => (() => (__webpack_require__(/*! ./node_modules/react/index.js */ "./node_modules/react/index.js"))))));
+/******/ 					initExternal("webpack/container/reference/mfeHeader");
+/******/ 					initExternal("webpack/container/reference/mfeLobby");
+/******/ 					initExternal("webpack/container/reference/mfeCatalog");
+/******/ 					initExternal("webpack/container/reference/mfeCart");
 /******/ 				}
 /******/ 				break;
 /******/ 			}
@@ -232,7 +443,7 @@ eval("{var moduleMap = {\n\t\"./CatalogView\": () => {\n\t\treturn Promise.all([
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	(() => {
-/******/ 		__webpack_require__.p = "http://localhost:3003/";
+/******/ 		__webpack_require__.p = "http://localhost:3000/";
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/consumes */
@@ -360,12 +571,16 @@ eval("{var moduleMap = {\n\t\"./CatalogView\": () => {\n\t\treturn Promise.all([
 /******/ 		});
 /******/ 		var installedModules = {};
 /******/ 		var moduleToHandlerMapping = {
-/******/ 			"webpack/sharing/consume/default/react/react": () => (loadSingletonVersion("default", "react", false, [1,18,2,0], () => (__webpack_require__.e("vendors-node_modules_react_index_js").then(() => (() => (__webpack_require__(/*! react */ "./node_modules/react/index.js")))))))
+/******/ 			"webpack/sharing/consume/default/react/react": () => (loadSingletonVersion("default", "react", false, [1,18,2,0], () => (__webpack_require__.e("vendors-node_modules_react_index_js").then(() => (() => (__webpack_require__(/*! react */ "./node_modules/react/index.js"))))))),
+/******/ 			"webpack/sharing/consume/default/react-dom/react-dom": () => (loadSingletonVersion("default", "react-dom", false, [1,18,2,0], () => (__webpack_require__.e("vendors-node_modules_react-dom_index_js").then(() => (() => (__webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js")))))))
 /******/ 		};
 /******/ 		// no consumes in initial chunks
 /******/ 		var chunkMapping = {
 /******/ 			"webpack_sharing_consume_default_react_react": [
 /******/ 				"webpack/sharing/consume/default/react/react"
+/******/ 			],
+/******/ 			"src_bootstrap_jsx": [
+/******/ 				"webpack/sharing/consume/default/react-dom/react-dom"
 /******/ 			]
 /******/ 		};
 /******/ 		var startedInstallModules = {};
@@ -409,7 +624,7 @@ eval("{var moduleMap = {\n\t\"./CatalogView\": () => {\n\t\treturn Promise.all([
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"mfeCatalog": 0
+/******/ 			"main": 0
 /******/ 		};
 /******/ 		
 /******/ 		__webpack_require__.f.j = (chunkId, promises) => {
@@ -421,7 +636,7 @@ eval("{var moduleMap = {\n\t\"./CatalogView\": () => {\n\t\treturn Promise.all([
 /******/ 					if(installedChunkData) {
 /******/ 						promises.push(installedChunkData[2]);
 /******/ 					} else {
-/******/ 						if("webpack_sharing_consume_default_react_react" != chunkId) {
+/******/ 						if(/^(vendors\-node_modules_react(|\-dom)_index_js|main|src_bootstrap_jsx)$/.test(chunkId)) {
 /******/ 							// setup Promise in chunk cache
 /******/ 							var promise = new Promise((resolve, reject) => (installedChunkData = installedChunks[chunkId] = [resolve, reject]));
 /******/ 							promises.push(installedChunkData[2] = promise);
@@ -486,7 +701,7 @@ eval("{var moduleMap = {\n\t\"./CatalogView\": () => {\n\t\treturn Promise.all([
 /******/ 		
 /******/ 		}
 /******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunkpixelarena_mfe_catalog"] = self["webpackChunkpixelarena_mfe_catalog"] || [];
+/******/ 		var chunkLoadingGlobal = self["webpackChunkpixelarena_shell"] = self["webpackChunkpixelarena_shell"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();
@@ -501,8 +716,7 @@ eval("{var moduleMap = {\n\t\"./CatalogView\": () => {\n\t\treturn Promise.all([
 /******/ 	// module cache are used so entry inlining is disabled
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	var __webpack_exports__ = __webpack_require__("webpack/container/entry/mfeCatalog");
-/******/ 	mfeCatalog = __webpack_exports__;
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
 /******/ 	
 /******/ })()
 ;
